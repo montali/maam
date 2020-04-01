@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   display: flex;
+  width: 100vw;
+  height: 100vh;
 }
 
 .background {
@@ -12,13 +14,18 @@
   position: fixed;
   z-index: 100;
 }
-
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
 .ulContainer {
   width: 50vw;
   height: 100vh;
@@ -28,7 +35,7 @@ ul {
   width: 50vw;
   left: 0;
 
-  height: auto;
+  height: 100vh;
   object-fit: cover;
   position: fixed;
 }
@@ -39,6 +46,27 @@ ul {
 
 .right {
   right: 0;
+}
+#secondPic {
+  right: 0;
+}
+.backgroundContainer {
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+@media only screen and (min-width: 590px) {
+  .titleContainer h1 {
+    font-size: 100px;
+    color: white;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .titleContainer h1 {
+    font-size: 50px;
+    color: white;
+  }
 }
 
 .App-logo {
@@ -66,14 +94,6 @@ ul {
 .App-link {
   color: #61dafb;
 }
-
-.backgroundContainer {
-  width: 50vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-}
-
 .titleContainer {
   display: flex;
   justify-content: center;
@@ -84,22 +104,13 @@ ul {
   height: 100vh;
   z-index: 300;
   text-align: center;
+  position: fixed;
 }
 
-.titleContainer h1 {
-  font-size: 100px;
-  color: white;
-}
-
-#secondPic {
-  right: 0;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fullScreen {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 500;
 }
